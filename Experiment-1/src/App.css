@@ -1,0 +1,102 @@
+/* Resetting for Full Viewport */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden; /* Side scrolling rokne ke liye */
+  font-family: 'Inter', sans-serif;
+  background-color: #ffffff;
+}
+
+/* 1. Wrapper: Takes 100% of screen height */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* 2. Navbar: Full Width & Consistent Height */
+.navbar {
+  height: 75px; /* Fixed Height for all pages */
+  width: 100%;
+  background: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 5%; /* Side padding for balance */
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #2563eb;
+  letter-spacing: -1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 15px;
+}
+
+/* Constant Button Shapes */
+.nav-btn {
+  padding: 10px 25px;
+  min-width: 110px; /* Sabhi buttons ka size same rahega */
+  border: 1px solid #e2e8f0;
+  background: #f8fafc;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #1e293b;
+}
+
+.nav-btn:hover {
+  background: #1e293b;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* 3. Content Area: Stretches to fill the screen */
+.content {
+  flex: 1; /* Bachi hui poori space occupy karega */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-content {
+  width: 100%;
+  padding: 80px 10%; /* Professional spacing from sides */
+  min-height: 100%;
+  text-align: left; /* Industry level standard */
+  animation: fadeIn 0.4s ease-out;
+}
+
+/* 4. Footer: Always at the bottom edge */
+.footer {
+  height: 60px;
+  width: 100%;
+  background: #0f172a;
+  color: #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  border-top: 1px solid #1e293b;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}

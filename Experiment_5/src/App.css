@@ -1,0 +1,110 @@
+/* --- RESET DEFAULT MARGINS --- */
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; 
+}
+
+:root {
+  --primary-teal: #0d9488;
+}
+
+.portfolio-root {
+  min-height: 100vh;
+  width: 100%; 
+  font-family: 'Inter', sans-serif;
+  /* MUI will now handle background and text color automatically */
+}
+
+.contact-btn {
+  background-color: var(--primary-teal) !important;
+  color: white !important; /* Added to keep text visible in both modes */
+  border-radius: 20px !important;
+  text-transform: none !important;
+  padding-left: 24px !important;
+  padding-right: 24px !important;
+}
+
+/* --- HERO SECTION HEIGHT FIX --- */
+.hero-section {
+  padding: 50px 0 40px 0; 
+  width: 100%;
+}
+
+.hero-title {
+  font-weight: 800 !important;
+  margin-top: 10px !important;
+  font-size: 3.5rem !important; 
+}
+
+@media (max-width: 600px) {
+    .hero-title {
+        font-size: 2.5rem !important;
+    }
+}
+
+.hero-subtext {
+    font-size: 1.1rem !important;
+    margin-top: 20px !important;
+    max-width: 600px; 
+}
+
+.highlight {
+  color: var(--primary-teal);
+}
+
+.teal-text {
+  color: var(--primary-teal);
+  font-weight: bold !important;
+  letter-spacing: 1px !important;
+}
+
+.section-title {
+  font-weight: 700 !important;
+  margin-bottom: 40px !important;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--primary-teal);
+  border-radius: 2px;
+}
+
+/* Skills Section */
+.skill-progress {
+  height: 10px !important;
+  border-radius: 5px;
+}
+
+.skill-progress .MuiLinearProgress-bar {
+  background-color: var(--primary-teal) !important;
+  border-radius: 5px;
+}
+
+/* Project Cards */
+.project-card {
+  border-radius: 16px !important;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid #e2e8f0;
+  height: 100%; 
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  border-color: var(--primary-teal);
+}
+
+.footer {
+  padding: 40px;
+  text-align: center;
+  border-top: 1px solid #e2e8f0;
+  margin-top: auto; 
+}

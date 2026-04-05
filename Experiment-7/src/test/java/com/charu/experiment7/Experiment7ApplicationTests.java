@@ -1,10 +1,10 @@
-package com.charu.experiment6;
+package com.charu.experiment7;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class Experiment6ApplicationTests {
+class Experiment7ApplicationTests {
 
     @Test
     void contextLoads() {
